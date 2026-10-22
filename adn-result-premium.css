@@ -4,7 +4,7 @@
 #result .pill:before{content:'✦';font-size:15px}
 #result #headline{font-size:clamp(25px,4vw,38px);line-height:1.16;letter-spacing:-.045em;margin:17px 0 20px}
 #result .result-score-card{display:grid;grid-template-columns:128px 1fr;align-items:center;gap:24px;background:linear-gradient(120deg,#f0f6fa,#e9f5f1);border:1px solid #cce3e3;border-radius:20px;padding:22px;margin:0 0 22px}
-#result .result-score-card .metric{display:grid;place-items:center;width:116px;height:116px;border-radius:50%;background:radial-gradient(closest-side,#fff 81%,transparent 83%),conic-gradient(#4679ad 0%,#79b9af 68%,#dbe6ed 68%);font-size:32px;font-weight:800;letter-spacing:-.05em;color:#172c49;box-shadow:0 6px 20px #172c4910}
+#result .result-score-card .metric{display:grid;place-items:center;width:116px;height:116px;border-radius:50%;background:radial-gradient(closest-side,#fff 81%,transparent 83%),conic-gradient(#4679ad,#79b9af,#4679ad);font-size:32px;font-weight:800;letter-spacing:-.05em;color:#172c49;box-shadow:0 6px 20px #172c4910}
 #result .result-score-card p{margin:0;font-size:14px;line-height:1.5;color:#48627a}
 #result .result-score-card strong{display:block;color:#172c49;font-size:17px;margin-bottom:5px}
 #result .result-intro{font-size:15px;line-height:1.75}
