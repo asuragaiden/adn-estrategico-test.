@@ -31,3 +31,11 @@
 
 /* Educación: tres datos en una fila */
 .education-section .fields{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:850px){.education-section .fields{grid-template-columns:1fr}}
+
+/* El selector ocupa TODO el ancho de la sección, no una sola columna de .fields */
+#ranking-prioridades{grid-column:1 / -1;width:100%;min-width:0;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#ranking-prioridades button{min-width:0;min-height:158px;padding:24px 56px 24px 86px;justify-content:center}
+#ranking-prioridades button b{font-size:clamp(18px,1.6vw,23px)}
+#ranking-prioridades button p{font-size:14px;max-width:none}
+#ranking-status{grid-column:1 / -1;width:100%}
+@media(max-width:600px){#ranking-prioridades{grid-template-columns:1fr;gap:12px}#ranking-prioridades button{min-height:124px;padding:20px 48px 20px 78px}}
