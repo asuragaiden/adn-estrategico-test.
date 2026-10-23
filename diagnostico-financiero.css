@@ -23,3 +23,5 @@
 #ranking-status{border-radius:12px;background:#edf5f7;border:1px solid #d6e9e8;padding:13px 16px;color:#355c69;font-size:13px;line-height:1.5}
 @media(max-width:600px){#ranking-prioridades{grid-template-columns:1fr;gap:12px}#ranking-prioridades button{min-height:120px;padding:20px 52px 20px 78px}#ranking-prioridades .rank-number{left:18px}}
 @media(prefers-reduced-motion:reduce){#ranking-prioridades button{transition:none}#ranking-prioridades button:hover{transform:none}}
+
+.curve-original-image{display:block;width:100%;height:auto;object-fit:contain;border-radius:10px;background:#fff}.original-curve{background:#fff;padding:10px}.original-curve p{text-align:center;font-size:12px;color:#617488;margin:12px 0 0}
