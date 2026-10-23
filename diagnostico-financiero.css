@@ -28,3 +28,6 @@
 
 /* Retiro: tres campos en una sola fila en pantallas amplias */
 .retirement-section .fields{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:850px){.retirement-section .fields{grid-template-columns:1fr}}
+
+/* Educación: tres datos en una fila */
+.education-section .fields{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:850px){.education-section .fields{grid-template-columns:1fr}}
