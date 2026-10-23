@@ -39,3 +39,10 @@
 #ranking-prioridades button p{font-size:14px;max-width:none}
 #ranking-status{grid-column:1 / -1;width:100%}
 @media(max-width:600px){#ranking-prioridades{grid-template-columns:1fr;gap:12px}#ranking-prioridades button{min-height:124px;padding:20px 48px 20px 78px}}
+
+/* Resumen integral por prioridad */
+.priority-metric h3{font-size:15px;color:#79b9af;margin:0 0 15px;letter-spacing:.015em}
+.priority-metric span{margin:11px 0 5px;font-size:12px}
+.priority-metric strong{display:block;font-size:21px;overflow-wrap:anywhere}
+.priority-metric strong+span{margin-top:16px}
+#educacion-persona{font-size:16px}
