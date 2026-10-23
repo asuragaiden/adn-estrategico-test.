@@ -5,3 +5,21 @@
 
 /* Ranking interactivo de prioridades */
 .pdf-priorities button{appearance:none;position:relative;text-align:left;cursor:pointer;border:2px solid transparent;border-left:5px solid #1768d5;border-radius:14px;background:#f0f5fa;padding:20px 18px 20px 58px;min-height:144px;color:#172c49;transition:background .18s,border-color .18s,transform .18s}.pdf-priorities button:hover{border-color:#79b9af;transform:translateY(-2px)}.pdf-priorities button.selected{background:#e0f1ed;border-color:#338f82}.pdf-priorities button:focus-visible{outline:3px solid #4679ad;outline-offset:3px}.pdf-priorities button b{font-size:18px;color:#1455c6}.pdf-priorities button p{font-size:13px;color:#536b80;margin:12px 0 0}.rank-number{position:absolute;top:18px;left:12px;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#d6e4f5;color:#1455c6;font-weight:800}.selected .rank-number{background:#267b71;color:white}.ranking-help{grid-column:1/-1;font-size:13px;color:#4679ad;margin:0}
+
+/* Premium interactive priority selector — Claridad Digital */
+#ranking-prioridades{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
+#ranking-prioridades button{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:170px;width:100%;padding:28px 22px 24px 76px;border:1px solid #d7e3ed;border-radius:20px;background:linear-gradient(145deg,#ffffff 0%,#f3f7fb 100%);color:#172c49;text-align:left;box-shadow:0 7px 24px rgba(23,44,73,.06),inset 0 1px 0 rgba(255,255,255,.85);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease;cursor:pointer;font-family:"Plus Jakarta Sans",sans-serif}
+#ranking-prioridades button::after{content:"";position:absolute;right:18px;top:18px;width:19px;height:19px;border:1.5px solid #b4c7d7;border-radius:50%;background:#fff;transition:all .2s ease}
+#ranking-prioridades button:hover{transform:translateY(-3px);border-color:#79b9af;box-shadow:0 15px 32px rgba(23,44,73,.12)}
+#ranking-prioridades button:focus-visible{outline:3px solid #4679ad;outline-offset:3px}
+#ranking-prioridades button b{display:block;color:#172c49;font-size:clamp(16px,1.5vw,20px);font-weight:800;letter-spacing:-.035em;line-height:1.2}
+#ranking-prioridades button p{font-size:13px;line-height:1.55;color:#62758a;margin:11px 0 0;max-width:210px}
+#ranking-prioridades .rank-number{position:absolute;left:20px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#e2eaf1;color:#4679ad;font-size:19px;font-weight:800;box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+#ranking-prioridades button.selected{background:linear-gradient(135deg,#172c49 0%,#244c72 100%);border-color:#356f8b;box-shadow:0 13px 28px rgba(23,44,73,.21),inset 0 1px 0 rgba(255,255,255,.14)}
+#ranking-prioridades button.selected b{color:#fff}
+#ranking-prioridades button.selected p{color:#c8dce8}
+#ranking-prioridades button.selected .rank-number{background:#79b9af;color:#102a40;box-shadow:0 3px 10px rgba(0,0,0,.13)}
+#ranking-prioridades button.selected::after{content:"✓";display:grid;place-items:center;background:#79b9af;border-color:#79b9af;color:#102a40;font-size:13px;font-weight:900}
+#ranking-status{border-radius:12px;background:#edf5f7;border:1px solid #d6e9e8;padding:13px 16px;color:#355c69;font-size:13px;line-height:1.5}
+@media(max-width:600px){#ranking-prioridades{grid-template-columns:1fr;gap:12px}#ranking-prioridades button{min-height:120px;padding:20px 52px 20px 78px}#ranking-prioridades .rank-number{left:18px}}
+@media(prefers-reduced-motion:reduce){#ranking-prioridades button{transition:none}#ranking-prioridades button:hover{transform:none}}
