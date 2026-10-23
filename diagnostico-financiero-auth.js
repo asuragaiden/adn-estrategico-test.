@@ -12,6 +12,7 @@ $("#new-case").addEventListener("click",()=>{currentId=null;$("#diagnostico").re
 $("#save-case").addEventListener("click",save);
 $("#reload-cases").addEventListener("click",list);
 $("#send-link").addEventListener("click",async()=>{const email=$("#login-email").value.trim();if(!email)return status("Escribe tu correo.");if(!db)return status("No se pudo iniciar el servicio.");const {error}=await db.auth.signInWithOtp({email,options:{emailRedirectTo:location.origin+location.pathname,shouldCreateUser:false}});status(error?"No se pudo enviar el enlace: "+error.message:"Revisa tu correo y abre el enlace de acceso.")});
+$("#verify-token").addEventListener("click",async()=>{const email=$("#login-email").value.trim(),token=$("#login-token").value.trim();if(!email)return status("Escribe el correo al que llegó el código.");if(!/^\d{8}$/.test(token))return status("Ingresa los 8 dígitos del correo.");$("#verify-token").disabled=true;status("Verificando código…");try{const {error}=await db.auth.verifyOtp({email,token,type:"email"});if(error){status("No se pudo validar el código: "+error.message);return}status("Código validado. Comprobando permisos…");await show()}finally{$("#verify-token").disabled=false}});
 $("#logout").addEventListener("click",async()=>{await db.auth.signOut();user=null;currentId=null;lock("Sesión cerrada.")});
 if(!cfg||!window.supabase){lock("No se encontró la configuración de Supabase.");return}
 db=window.supabase.createClient(cfg.url,cfg.publishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
